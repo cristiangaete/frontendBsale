@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    
+    <div data-role="appbar" data-expand-point="md" >
+
+        <ul class="app-bar-menu" style="color: darkcyan;">
+            
+            <div class="pos-fixed pos-top-center">
+                <li>
+                    
+                        <!-- <input type="text" data-role="input" data-search-button="true" id="btnBuscar"> -->
+                        <form class="inline-form">
+                            <input type="text" placeholder="Your Name" data-role="input" id="inputBuscar">
+                            <button class="button success" id="btnBuscar">Buscar</button>
+                        </form>
+                </li>
+            </div>
+            <div class="pos-fixed pos-top-right">
+                <select  id="sltCategory">
+                    <option value="0">Seleccione una categoria</option>
+                </select>
+            </div>
+
+        </ul>
+
+
+    </div>
+
+    
+    <!-- <div class="d-flex flex-justify-center flex-wrap m-2">
+        <button class="button m-1" onclick="sortList('painting-price','asc')">Price <span class="mif-arrow-up"></span></button>
+    </div>  -->
+        <ul id="paintings"
+        data-role="list"
+        data-cls-list="unstyled-list row flex-justify-center mt-4"
+        data-cls-list-item="cell-sm-6 cell-md-4"
+        >
+            
+        
+        </ul>
+
+        
+    
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
