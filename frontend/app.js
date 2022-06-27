@@ -1,18 +1,38 @@
+//cargamos los productos
+// let urlProduct =`http://localhost:3000/product`
+let urlProduct =`https://crtbsale.herokuapp.com/product`
+getFetch(urlProduct)
 
-const btnBuscar = document.getElementById("btnBuscar");
-//Aqui se busca desde del input 
-btnBuscar.addEventListener("click",(e) =>{
-    // debugger
-    e.preventDefault()
+//cargamos las categorias
+// let urlCategory =`http://localhost:3000/category`
+let urlCategory =`https://crtbsale.herokuapp.com/category`
+getFetchCategory(urlCategory)
+
+// const btnBuscar = document.getElementById("btnBuscar");
+// //Aqui se busca desde del input 
+// btnBuscar.addEventListener("click",(e) =>{
+//     // debugger
+//     e.preventDefault()
     
-    let buscar = document.getElementById("inputBuscar").value;
+//     let buscar = document.getElementById("inputBuscar").value;
     
-    // let transaction = {buscar: buscar};
-    // let transactionJson = JSON.stringify(transaction);
-    let url = `http://localhost:3000/product/${buscar}`;
+    
+//     // let transaction = {buscar: buscar};
+//     // let transactionJson = JSON.stringify(transaction);
+//     let url = `https://crtbsale.herokuapp.com/product/${buscar}`;
+    
+//     getFetch(url)
+// })
+
+function mySubmitSearch(val){
+    
+    let btn2 = document.getElementById("btnBuscar2").value
+    
+    let url = `https://crtbsale.herokuapp.com/product/${btn2}`;
     
     getFetch(url)
-})
+    
+}
 
 const select = document.querySelector("#sltCategory")
 //Rellenamos el select
@@ -20,12 +40,13 @@ async function getFetchCategory(url){
     const res = await fetch(url)
     const data = await res.json()
     
-    console.log(data)
+    // console.log(data)
     data.forEach(element => {
         let opt = document.createElement('option');
         opt.value = element.id; 
         opt.text = element.name
         select.appendChild(opt);
+        
     })
     
 
@@ -35,10 +56,11 @@ async function getFetchCategory(url){
 select.addEventListener("change", (e) =>{
     e.preventDefault()
     let selectBuscar = select.value;
-    console.log(selectBuscar)
+    // console.log(selectBuscar)
     if(selectBuscar>0){
-        getFetch(`http://localhost:3000/category/${selectBuscar}`)
+        getFetch(`https://crtbsale.herokuapp.com/category/${selectBuscar}`)
     }
+    
     
 })
 
@@ -46,7 +68,7 @@ select.addEventListener("change", (e) =>{
 async function getFetch(url){
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
+    // console.log(data)
     let cards = ''
     data.forEach(element => {
        
@@ -94,11 +116,5 @@ async function getFetch(url){
 
 }
 
-//cargamos los productos
-let urlProduct =`http://localhost:3000/product`
-getFetch(urlProduct)
 
-//cargamos las categorias
-let urlCategory =`http://localhost:3000/category`
-getFetchCategory(urlCategory)
    
