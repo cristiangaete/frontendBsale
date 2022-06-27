@@ -8,8 +8,9 @@
 ## General Info
 ***
 Prueba de desarrollo en Bsale para el cargo de software developer.
-Para este proyecto se uso HTML, libreria Metro4_ui, css, fetch con asincronismo y JavaScript puro para el desarrollo del frontend .
-Posteriormente este frontend se subio a la plataforma de netlify para probar su funcionamiento de manera online
+Para este proyecto se uso HTML, librería Metro4_ui para el input, app bar y el boton buscar, css para el dimensionamiento de imágenes, a sincronismo para la obtención de datos  y vanilla javascript puro para el desarrollo y manejo de datos del frontend.
+Posteriormente este frontend se subió a la plataforma de netlify para probar su funcionamiento de manera online.
+Pd:al momento de la primera carga de la pagina se demora por la carga de datos.
 
 ## Technologies
 ***
