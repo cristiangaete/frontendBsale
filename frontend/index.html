@@ -14,29 +14,45 @@
 <body>
     
     
-    <div data-role="appbar" data-expand-point="lg" >
+    <div data-role="appbar" data-expand-point="md" >
         <a href="index.html" class="brand no-hover" style="color:darkcyan">
             <h3>Bsale test</h3>
         </a>
 
         <ul class="app-bar-menu" style="color: darkcyan;">
             
-            <div class="pos-fixed pos-top-center">
-                <li>
+            <form class="inline-form-md">
+                <div class="row">
+                    <div class="cell-md-6 pos-top-center">
+                        <input type="text" data-role="input" data-search-button="true" 
+                                data-search-button-click="custom"
+                                data-on-search-button-click="mySubmitSearch"
+                                id="btnBuscar2">
+                    </div>
+                    <div class="cell-md-6 pos-top-center">
+                        <select  id="sltCategory">
+                            <option value="0">Seleccione una categoria</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        
+            <!-- <div class="pos-fixed pos-top-center">
+                <li> -->
                     
                         
                         <!-- <form class="inline-form"> -->
                             <!-- <input type="text" placeholder="Buscar producto" data-role="input" id="inputBuscar">
                             <button class="button success" id="btnBuscar">Buscar</button> -->
-                            <input type="text" data-role="input" data-search-button="true" 
+                            <!-- <input type="text" data-role="input" data-search-button="true" 
                                 
                                  data-search-button-click="custom"
                                 data-on-search-button-click="mySubmitSearch"
-                                id="btnBuscar2">
+                                id="btnBuscar2"> -->
                             
                             
                         <!-- </form> -->
-                </li>
+                <!-- </li>
             </div>
                 <div class="pos-fixed pos-top-right">
                     <li>
@@ -44,7 +60,7 @@
                             <option value="0">Seleccione una categoria</option>
                         </select>
                     </li>
-                </div>
+                </div> -->
             
             <!-- <div class="pos-fixed pos-top-right">
                 
